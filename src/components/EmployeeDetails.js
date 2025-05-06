@@ -8,15 +8,16 @@ const EmployeeDetails = () => {
     const { id } = useParams();
     const [employee, setEmployee] = useState({});
 
-    const fetchEmployeeDetails = async () => {
-        try {
-            const data = await GetEmployeeDetailsById(id);
-            setEmployee(data);
-        } catch (err) {
-            alert('Error', err);
-        }
-    }
+  
     useEffect(() => {
+        const fetchEmployeeDetails = async () => {
+            try {
+                const data = await GetEmployeeDetailsById(id);
+                setEmployee(data);
+            } catch (err) {
+                alert('Error', err);
+            }
+        }
         fetchEmployeeDetails();
     }, [id])
 

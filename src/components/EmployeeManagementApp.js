@@ -1,9 +1,9 @@
 import React, { useEffect, useState } from 'react';
 import EmployeeTable from './EmployeeTable';
 import AddEmployee from './AddEmployee';
-import { DeleteEmployeeById, GetAllEmployees } from '../api';
+import {  GetAllEmployees } from '../api';
 import { ToastContainer } from 'react-toastify';
-import { notify } from '../utils';
+
 
 
 const EmployeeManagementApp = () => {
